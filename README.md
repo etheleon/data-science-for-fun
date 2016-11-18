@@ -1,3 +1,3 @@
-# Study-Data-Science
+# Data Science Practical 
 - Basic Titanic project in differenct aspects
-- Image Analysis CS301
+- Containerized Model - wrap a simple Iris model into API with Flask and Docker
