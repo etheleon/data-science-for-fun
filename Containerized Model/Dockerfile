@@ -17,4 +17,4 @@ ADD . /
 EXPOSE 5000
 
 # run the API 
-CMD [ "python", "/api.py" 
+CMD [ "python", "/api.py" ]
