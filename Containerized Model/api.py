@@ -8,7 +8,6 @@ api = Api(app)
 
 class Prediction(Resource):  
     def get(self):
-
         parser = reqparse.RequestParser()
         parser.add_argument('slength', type=float, 
                  help='slength cannot be converted')
@@ -39,5 +38,6 @@ class Prediction(Resource):
 
 api.add_resource(Prediction, '/prediction')
 
-if __name__ == '__main__':  
-    app.run(host="0.0.0.0", port=5000)
+if __name__ == '__main__':
+    print('running')  
+    app.run(host="0.0.0.0")
