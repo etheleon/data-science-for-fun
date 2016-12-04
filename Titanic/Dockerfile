@@ -10,7 +10,3 @@ RUN apt-get install -y python-numpy python-scipy
 RUN pip install pandas
 RUN pip install jupyter
 RUN pip install matplotlib
-
-EXPOSE 8888
-
-CMD [ "ipython", "notebook", "--no-browser", "--ip=0.0.0.0"]
