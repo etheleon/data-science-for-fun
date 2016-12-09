@@ -9,4 +9,9 @@ RUN pip install --upgrade pip
 RUN apt-get install -y python-numpy python-scipy
 RUN pip install pandas
 RUN pip install jupyter
+RUN pip install scikit-learn  
 RUN pip install matplotlib
+RUN pip install pydotplus
+
+RUN apt-get install -y graphviz
+RUN pip install graphviz
