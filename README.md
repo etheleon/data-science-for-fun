@@ -4,3 +4,4 @@
 - NLP - natural language processing with Hacker News Dataset
 - Face Detection - Detect the face in the picture
 - XgBoost 
+- Boston Housing
