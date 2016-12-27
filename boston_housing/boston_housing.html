@@ -1,9 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head><meta charset="utf-8" />
-<title>boston_housing</title>
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
+<title>boston_housing</title><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
 
 <style type="text/css">
@@ -14753,7 +14751,7 @@ gTmsmZmZmTUwhzUzMzOzBvY/ZzV3nxQGMLAAAAAASUVORK5CYII=
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Training model is required some of parameters. Grid search technique combine different parameters together for testing and find the best parameters to optimize the model.</p>
+<p>Training model is required some of parameters. Grid search technique combine different parameters together for testing and find the best parameters to optimize the model. Take example of decision tree, we change the max_depth of the tree to check under max depth, which one have better result from the performance matrix.</p>
 
 </div>
 </div>
@@ -14800,6 +14798,16 @@ gTmsmZmZmTUwhzUzMzOzBvY/ZzV3nxQGMLAAAAAASUVORK5CYII=
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>If we use only Grid search technique without cross-validated, the parameter may be fitted perfect for the training set but may not be the best one for unseen dataset.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>In addition, if we use K-fold cross validation technique, we use all the data as both training and testing so we have the model that fit to all data.</p>
 
 </div>
 </div>
@@ -14931,7 +14939,7 @@ gTmsmZmZmTUwhzUzMzOzBvY/ZzV3nxQGMLAAAAAASUVORK5CYII=
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><strong>Answer:</strong> Parameter 'max_depth' is 4 for the optimal model.</p>
+<p><strong>Answer:</strong> Parameter 'max_depth' is 4 for the optimal model. My guess is correct in Question 6 with max_depth=4</p>
 
 </div>
 </div>
@@ -17598,4 +17606,8 @@ AAAAAACYioAKAAAAAAAAAAAApiKgAgAAAAAAAAAAgKkIqAAAAAAAAAAAAGAqAioAAAAAAAAAAACY
     </div>
   </div>
 </body>
+
+ 
+
+
 </html>
