@@ -6,7 +6,7 @@ from keras.layers import Dense, Dropout, LSTM
 from keras.callbacks import ModelCheckpoint
 from keras.utils import np_utils
 
-filename = "data/test.txt"
+filename = "data/sherlock_holmes.txt"
 raw_text = open(filename).read().lower()
 
 chars = sorted(list(set(raw_text)))
@@ -41,7 +41,7 @@ model.add(Dropout(0.2))
 # model.add(Dropout(0.2))
 model.add(Dense(y.shape[1], activation='softmax'))
 
-filename = "weights/weights-impovement-19-2.8703.hdf5"
+filename = "weights/weights-impovement-49-1.7234.hdf5"
 model.load_weights(filename)
 model.compile(loss='categorical_crossentropy', optimizer='adam')
 
