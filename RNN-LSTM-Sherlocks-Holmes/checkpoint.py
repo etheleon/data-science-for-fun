@@ -51,4 +51,4 @@ model.compile(loss='categorical_crossentropy', optimizer='adam')
 filepath = "weights/weights-impovement-{epoch:2d}-{loss:.4f}-bigger.hdf5"
 checkpoint = ModelCheckpoint(filepath, monitor='loss', verbose=1, save_best_only=True, mode='min')
 callbacks_list = [checkpoint]
-model.fit(X, y, epochs=50, batch_size=64, callbacks=callbacks_list)
+model.fit(X, y, epochs=100, batch_size=64, callbacks=callbacks_list)
