@@ -35,20 +35,20 @@ X = X / float(n_vocab)
 y = np_utils.to_categorical(dataY)
 
 model = Sequential()
-model.add(LSTM(256, input_shape=(X.shape[1], X.shape[2])))
+model.add(LSTM(256, input_shape=(X.shape[1], X.shape[2]), return_sequences=True))
 model.add(Dropout(0.2))
-# model.add(LSTM(256))
-# model.add(Dropout(0.2))
+model.add(LSTM(256))
+model.add(Dropout(0.2))
 model.add(Dense(y.shape[1], activation='softmax'))
 
-filename = "weights/weights-impovement-49-1.7234.hdf5"
+filename = "weights/weights-impovement-93-1.4033-bigger.hdf5"
 model.load_weights(filename)
 model.compile(loss='categorical_crossentropy', optimizer='adam')
 
 start = np.random.randint(0, len(dataX)-1)
 pattern = dataX[start]
 print("Seed: ")
-print("\"", ''.join([int_to_char[value] for value in pattern]), "\"")
+print(''.join([int_to_char[value] for value in pattern]))
 
 for i in range(1000):
 	x = np.reshape(pattern, (1, len(pattern), 1))
