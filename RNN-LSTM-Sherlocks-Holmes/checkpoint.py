@@ -48,7 +48,7 @@ model.add(Dense(y.shape[1], activation='softmax'))
 model.compile(loss='categorical_crossentropy', optimizer='adam')
 
 # checkpoint
-filepath = "weights/2-weights-impovement-{epoch:2d}-{loss:.4f}-bigger.hdf5"
+filepath = "weights/3-weights-impovement-{epoch:2d}-{loss:.4f}-bigger.hdf5"
 checkpoint = ModelCheckpoint(filepath, monitor='loss', verbose=1, save_best_only=True, mode='min')
 callbacks_list = [checkpoint]
-model.fit(X, y, epochs=300, batch_size=64, callbacks=callbacks_list)
+model.fit(X, y, epochs=400, batch_size=64, callbacks=callbacks_list)
