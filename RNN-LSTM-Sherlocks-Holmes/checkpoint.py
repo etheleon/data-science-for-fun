@@ -50,5 +50,6 @@ model.compile(loss='categorical_crossentropy', optimizer='adam')
 # checkpoint
 filepath = "weights/3-weights-impovement-{epoch:2d}-{loss:.4f}-bigger.hdf5"
 checkpoint = ModelCheckpoint(filepath, monitor='loss', verbose=1, save_best_only=True, mode='min')
-callbacks_list = [checkpoint]
+early_stopping =EarlyStopping(monitor='val_loss', patience=3)
+callbacks_list = [early_stopping, checkpoint]
 model.fit(X, y, epochs=400, batch_size=64, callbacks=callbacks_list)
